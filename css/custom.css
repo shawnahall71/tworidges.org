@@ -1,0 +1,52 @@
+/*!
+ * Start Bootstrap - The Big Picture HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Sets the website background image
+http://www.publicdomainpictures.net/view-image.php?image=9737 */
+html { /* Stretches background to bottom on mobile platforms */
+  position: relative;
+  min-height: 100%;
+}
+
+body { /* Actually puts the background in place */
+	background: url('../img/background.jpg') no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+/* Sets a white background for text on the background */
+.mytext {
+	background-color: white;
+  border-radius: 6px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Provide some extra padding to leave space between rows */
+.padtop {
+  padding-top: 15px;
+}
+
+/* Prevent navbar from stretching to screen width */
+/*
+.navbar-default {
+    background-color:transparent;
+    border: none;
+}
+.navbar > .container > div
+{
+  background-color: white;
+}
+*/
+
+/* Necessary padding for top navbar */
+body {
+  /* min-height: 2000px; */
+  padding-top: 70px;
+  padding-bottom: 15px;
+}
