@@ -50,3 +50,12 @@ body {
   padding-top: 70px;
   padding-bottom: 15px;
 }
+
+/* Add some padding around the Facebook like button and align it*/
+.navbar-right {
+  padding-top: 10px;
+  vertical-align: middle;
+}
+.fb-like {
+  padding: 5px;
+}
