@@ -52,7 +52,7 @@
 		<div class="row">
 			<div class="col-lg-4 col-sm-6 col-xs-12" ng-repeat="x in names">
 				<a href="#">
-		             <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+		             <img src="{{ x.Image }}" class="thumbnail img-responsive">
 		        </a>
 		        <b>Name: </b>{{ x.FirstName }} {{ x.LastName }}<br>
 		        <b>Address: </b>{{ x.Address }}<br>{{ x.City }}, {{ x.State }} {{ x.Zip }} <br>

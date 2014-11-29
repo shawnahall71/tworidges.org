@@ -15,7 +15,7 @@ if (htmlspecialchars($_GET["q"]) === "count") {
     exit(0);
 }
 if (is_numeric($_GET["offset"]) && is_numeric($_GET["limit"])) {
-    $sql = "SELECT FirstName, LastName, Address, City, State, Zip, HomePhone, CellPhone, WorkPhone, Email ";
+    $sql = "SELECT FirstName, LastName, Address, City, State, Zip, HomePhone, CellPhone, WorkPhone, Email, Image ";
     $sql .= "FROM directory ";
     $sql .= "ORDER BY LastName ";
     $sql .= "LIMIT " . $_GET["offset"] . "," . $_GET["limit"];
@@ -34,7 +34,8 @@ if (is_numeric($_GET["offset"]) && is_numeric($_GET["limit"])) {
         $outp .= '"HomePhone":"' . $rs["HomePhone"] . '",';
         $outp .= '"CellPhone":"' . $rs["CellPhone"] . '",';
         $outp .= '"WorkPhone":"' . $rs["WorkPhone"] . '",';
-        $outp .= '"Email":"'     . $rs["Email"]     . '"}'; 
+        $outp .= '"Email":"'     . $rs["Email"]     . '",'; 
+        $outp .= '"Image":"'     . $rs["Image"]     . '"}';
     }
     $outp .= "]";
     echo($outp);
