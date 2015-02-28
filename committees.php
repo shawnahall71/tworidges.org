@@ -24,7 +24,7 @@
                 </tr>
                 <tr>
                 	<td>Administrative Committee</td>
-                	<td>Ken Simeral</td>
+                	<td>Alan Hall</td>
                 </tr>
                 <tr>
 					<td>Mission Committee</td>
@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
 					<td>Congregational Care Committee</td>
-                    <td>June Laughery</td>
+                    <td>Fred Goddard</td>
                 </tr>
                 <tr>
 					<td>Evangelism Committee</td>
@@ -40,7 +40,7 @@
                 </tr>
                 <tr>
 					<td>Building and Grounds Committee</td>
-                    <td>Ken Dearth</td>
+                    <td>John Clevenger</td>
                 </tr>
                 <tr>
 					<td>Worship Committee</td>
