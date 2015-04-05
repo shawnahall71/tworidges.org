@@ -22,9 +22,9 @@
 			</div>
 			<div class="col-md-6 mytext">
 				<h2 class="text-center">Newsletter</h2>
-				<img class="img-responsive center-block" src="img/newsletter_thumbnail.png">
+				<img class="img-responsive center-block" src="http://res.cloudinary.com/tworidges/image/upload/w_108,h_140,c_fill/files/newsletter.png">
 				<p>Find out the latest news from Two Ridges, including prayer requests, the church calendar, birthdays, anniversaries, and more.</p>
-				<a class="btn btn-primary" href="js/pdfjs/web/viewer.html?file=/files/newsletter.pdf" role="button">Newsletter &raquo;</a>
+				<a class="btn btn-primary" href="js/pdfjs/web/viewer.html?file=http://res.cloudinary.com/tworidges/image/upload/files/newsletter.pdf" role="button">Newsletter &raquo;</a>
 			</div>
 		</div>
 		<div class="row padtop">
