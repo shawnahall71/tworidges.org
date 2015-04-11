@@ -51,8 +51,8 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-4 col-sm-6 col-xs-12" ng-repeat="x in names">
-				<a href="http://res.cloudinary.com/tworidges/image/upload/{{ x.Image }}">
-		             <img src="http://res.cloudinary.com/tworidges/image/upload/c_fill,g_faces:center,h_600,w_800/{{ x.Image }}" class="thumbnail img-responsive">
+				<a href="http://res.cloudinary.com/tworidges/image/upload/directory/{{ x.Image }}">
+		             <img src="http://res.cloudinary.com/tworidges/image/upload/c_fill,g_faces:center,h_600,w_800/directory/{{ x.Image }}" class="thumbnail img-responsive">
 		        </a>
 		        <b>Name: </b>{{ x.FirstName }} {{ x.LastName }}<br>
 		        <b>Address: </b>{{ x.Address }}<br>{{ x.City }}, {{ x.State }} {{ x.Zip }} <br>
