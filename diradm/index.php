@@ -100,7 +100,7 @@
 				</div>
 				<div class="modal-footer">
 				    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-				    <input type="submit" class="btn primary-btn" value="Submit" />
+				    <input type="submit" class="btn primary-btn" value="Submit" ng-click="ok()"/>
 				</div>
 	        </form>
 	    </script>
