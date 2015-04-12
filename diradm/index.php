@@ -9,8 +9,9 @@
 		<script>
 			var site = "http://www.tworidges.org";
 			var page = "/directory/mysql_to_json.php";
+			// Need strap.directives for modal dependency
 			angular.module('myApp', ['ui.bootstrap']);
-			angular.module('myApp').controller('myCtrl', function ($scope,$http) {
+			angular.module('myApp').controller('pageCtrl', function ($scope,$http) {
 				change = function () {
 					var limit = 9;
 					var offset = 0;
@@ -38,16 +39,94 @@
 					change();
 				};
 			});
+			angular.module('myApp').controller('addModalCtrl', function ($scope,$http,$modal) {
+				$scope.entry = {
+			        name: null,
+			        address: null,
+			        homephone: null,
+			        cellphone: null,
+			        workphone: null,
+			        email: null
+			    };
+
+				$scope.open = function() {
+					var addModalInstance = $modal.open({
+						templateUrl: "addModalContent.html",
+						controller: "addModalInstance",
+						backdrop: 'static'
+					});
+				};
+			});
+			angular.module('myApp').controller('addModalInstance', function ($scope, $modalInstance) {
+
+				$scope.ok = function () {
+				  $modalInstance.close("test");
+				};
+
+				$scope.cancel = function () {
+				  $modalInstance.dismiss('cancel');
+				};
+			});
 		</script>
+		<script type="text/ng-template" id="addModalContent.html">
+	        <div class="modal-header">
+	            <h3 class="modal-title">Add new entry to directory</h3>
+	        </div>
+            <form ng-submit="submit()">
+				<div class="modal-body form-group">
+					<div class="form-group">
+						<label>Name</label>
+						<input type="text" class="form-control" placeholder="Enter name" ng-model="entry.name" />
+					</div>
+					<div class="form-group">
+						<label>Address</label>
+						<input type="text" class="form-control" placeholder="Enter address" ng-model="entry.address" />
+					</div>
+					<div class="form-group">
+						<label>Home Phone</label>
+						<input type="text" class="form-control" placeholder="Enter home phone" ng-model="entry.homephone" />
+					</div>
+					<div class="form-group">
+						<label>Cell Phone</label>
+						<input type="text" class="form-control" placeholder="Enter cell phone" ng-model="entry.cellphone" />
+					</div>
+					<div class="form-group">
+						<label>Work Phone</label>
+						<input type="text" class="form-control" placeholder="Enter work phone" ng-model="entry.workphone" />
+					</div>
+					<div class="form-group">
+						<label>Email</label>
+						<input type="text" class="form-control" placeholder="Enter email" ng-model="entry.email" />
+					</div>
+				</div>
+				<div class="modal-footer">
+				    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+				    <input type="submit" class="btn primary-btn" value="Submit" />
+				</div>
+	        </form>
+	    </script>
 	</head>
 
   	<body ng-app="myApp">
 	<?php require_once("../include/navbar.php"); ?>
 
     <!-- Begin page content -->
-	<div class="container mytext" ng-controller="myCtrl">
-		<div class="text-center">
-			<pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" items-per-page="numPerPage" class="pagination-sm" boundary-links="true" ng-change="pageChanged()"></pagination>
+	<div class="container mytext" ng-controller="pageCtrl">
+		<div class="row">
+			<div ng-controller="addModalCtrl">
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+					<div class="text-center padtop">
+						<button class="btn btn-success" ng-click="open()">
+							<span class="glyphicon glyphicon-user"></span>  New Entry
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6 col-xs-12">
+				<div class="text-center">
+					<pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" items-per-page="numPerPage" class="pagination-sm" boundary-links="true" ng-change="pageChanged()"></pagination>
+				</div>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-4 col-sm-6 col-xs-12" ng-repeat="x in names">

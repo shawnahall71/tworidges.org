@@ -10,7 +10,7 @@
 			var site = "http://www.tworidges.org";
 			var page = "/directory/mysql_to_json.php";
 			angular.module('myApp', ['ui.bootstrap']);
-			angular.module('myApp').controller('myCtrl', function ($scope,$http) {
+			angular.module('myApp').controller('pageCtrl', function ($scope,$http) {
 				change = function () {
 					var limit = 9;
 					var offset = 0;
@@ -45,7 +45,7 @@
 	<?php require_once("../include/navbar.php"); ?>
 
     <!-- Begin page content -->
-	<div class="container mytext" ng-controller="myCtrl">
+	<div class="container mytext" ng-controller="pageCtrl">
 		<div class="text-center">
 			<pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" items-per-page="numPerPage" class="pagination-sm" boundary-links="true" ng-change="pageChanged()"></pagination>
 		</div>

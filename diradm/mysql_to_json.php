@@ -4,7 +4,7 @@ header("Content-Type: text/html; charset=UTF-8");
 
 require_once("dbconf.php");
 
-$conn = new mysqli($db_ro_host, $db_ro_user, $db_ro_pass, $db_ro_db);
+$conn = new mysqli($db_rw_host, $db_rw_user, $db_rw_pass, $db_rw_db);
 
 if (htmlspecialchars($_GET["q"]) === "count") {
     $sqlcount = "SELECT count(*) FROM directory";
