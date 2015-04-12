@@ -9,7 +9,6 @@
 		<script>
 			var site = "http://www.tworidges.org";
 			var page = "/directory/mysql_to_json.php";
-			// Need strap.directives for modal dependency
 			angular.module('myApp', ['ui.bootstrap']);
 			angular.module('myApp').controller('pageCtrl', function ($scope,$http) {
 				change = function () {
