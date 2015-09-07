@@ -22,23 +22,13 @@ if (is_numeric($_GET["offset"]) && is_numeric($_GET["limit"])) {
 
     $result = $conn->query($sql) or trigger_error($conn->error."[$sql]");
 
-    $outp = "[";
-    while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
-        if ($outp != "[") {$outp .= ",";}
-        $outp .= '{"FirstName":"'. $rs["FirstName"] . '",';
-        $outp .= '"LastName":"'  . $rs["LastName"]  . '",';
-        $outp .= '"Address":"'   . $rs["Address"]   . '",';
-        $outp .= '"City":"'      . $rs["City"]      . '",';
-        $outp .= '"State":"'     . $rs["State"]     . '",';
-        $outp .= '"Zip":"'       . $rs["Zip"]       . '",';
-        $outp .= '"HomePhone":"' . $rs["HomePhone"] . '",';
-        $outp .= '"CellPhone":"' . $rs["CellPhone"] . '",';
-        $outp .= '"WorkPhone":"' . $rs["WorkPhone"] . '",';
-        $outp .= '"Email":"'     . $rs["Email"]     . '",'; 
-        $outp .= '"Image":"'     . $rs["Image"]     . '"}';
+    $jsonarray = array();
+    while($row = mysqli_fetch_assoc($result))
+    {
+        array_push($jsonarray, $row);
     }
-    $outp .= "]";
-    echo($outp);
+    echo json_encode($jsonarray);
+
     $conn->close();
 }
 ?>
