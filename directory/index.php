@@ -8,7 +8,7 @@
 		<script src="/js/ui-bootstrap-tpls-0.11.2.min.js"></script>
 		<script>
 			var site = "http://www.tworidges.org";
-			var page = "/directory/mysql_to_json.php";
+			var page = "/directory/read.php";
 			angular.module('myApp', ['ui.bootstrap']);
 			angular.module('myApp').controller('pageCtrl', function ($scope,$http) {
 				change = function () {
