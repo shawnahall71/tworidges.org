@@ -8,7 +8,6 @@
 		<script src="/js/ui-bootstrap-tpls-0.11.2.min.js"></script>
 		<script>
 			var site = "http://www.tworidges.org";
-			var page = "/directory/mysql_to_json.php";
 			angular.module('myApp', ['ui.bootstrap']);
 			angular.module('myApp').controller('pageCtrl', function ($scope,$http) {
 				change = function () {
@@ -40,12 +39,6 @@
 			});
 			angular.module('myApp').controller('addModalCtrl', function ($scope,$http,$modal) {
 				$scope.entry = {
-			        name: null,
-			        address: null,
-			        homephone: null,
-			        cellphone: null,
-			        workphone: null,
-			        email: null
 			    };
 
 				$scope.open = function() {
@@ -56,9 +49,7 @@
 					});
 				};
 			});
-			angular.module('myApp').controller('addModalInstance', function ($scope, $modalInstance) {
 
-				$scope.ok = function () {
 				  $modalInstance.close("test");
 				};
 
@@ -74,33 +65,25 @@
             <form ng-submit="submit()">
 				<div class="modal-body form-group">
 					<div class="form-group">
-						<label>Name</label>
-						<input type="text" class="form-control" placeholder="Enter name" ng-model="entry.name" />
 					</div>
 					<div class="form-group">
 						<label>Address</label>
-						<input type="text" class="form-control" placeholder="Enter address" ng-model="entry.address" />
 					</div>
 					<div class="form-group">
 						<label>Home Phone</label>
-						<input type="text" class="form-control" placeholder="Enter home phone" ng-model="entry.homephone" />
 					</div>
 					<div class="form-group">
 						<label>Cell Phone</label>
-						<input type="text" class="form-control" placeholder="Enter cell phone" ng-model="entry.cellphone" />
 					</div>
 					<div class="form-group">
 						<label>Work Phone</label>
-						<input type="text" class="form-control" placeholder="Enter work phone" ng-model="entry.workphone" />
 					</div>
 					<div class="form-group">
 						<label>Email</label>
-						<input type="text" class="form-control" placeholder="Enter email" ng-model="entry.email" />
 					</div>
 				</div>
 				<div class="modal-footer">
 				    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-				    <input type="submit" class="btn primary-btn" value="Submit" ng-click="ok()"/>
 				</div>
 	        </form>
 	    </script>
