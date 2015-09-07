@@ -162,7 +162,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-4 col-sm-6 col-xs-12" ng-repeat="x in names">
+			<div class="col-lg-4 col-sm-6 col-xs-12 padtop" ng-repeat="x in names">
 				<a href="http://res.cloudinary.com/tworidges/image/upload/directory/{{ x.Image }}">
 		             <img src="http://res.cloudinary.com/tworidges/image/upload/c_fill,g_faces:center,h_600,w_800/directory/{{ x.Image }}" class="thumbnail img-responsive">
 		        </a>
@@ -172,6 +172,14 @@
 		        <b>Cell Phone: </b>{{ x.CellPhone }}<br>
 		        <b>Work Phone: </b>{{ x.WorkPhone }}<br>
 		        <b>Email: </b>{{ x.Email }}<br><br>
+		        <div class="text-center">
+			        <button class="btn btn-success" ng-click="open()">
+						<span class="glyphicon glyphicon-pencil"></span>  Edit Entry
+					</button>
+			        <button class="btn btn-danger" ng-click="open()">
+						<span class="glyphicon glyphicon-remove"></span>  Remove Entry
+					</button>
+				</div>
 			</div>
 		</div>
 		<div class="text-center">
