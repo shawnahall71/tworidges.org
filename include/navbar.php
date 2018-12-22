@@ -33,7 +33,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <div class="fb-like" data-href="https://www.facebook.com/tworidges" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+        <div class="fb-like" data-href="https://www.facebook.com/tworidges" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
