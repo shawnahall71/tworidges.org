@@ -13,8 +13,8 @@
 
     <!-- Begin page content -->
 	<div class="container mytext">
-		<div class="Flexible-container">
-			<iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23FFFFFF&src=1085tworidges%40gmail.com&color=#1D9CE5&ctz=America%2FNew_York"></iframe>
+		<div class="text-center">
+			<div class="fb-page" data-href="https://www.facebook.com/tworidges/" data-tabs="timeline, events" data-width="500" data-height="750" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/tworidges/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/tworidges/">Two Ridges Presbyterian Church</a></blockquote></div>
 		</div>
 	</div>
 	<?php require_once("include/js.php"); ?>
