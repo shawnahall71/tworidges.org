@@ -13,8 +13,7 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
-        <li><a href="/calendar.php">Calendar</a></li>
-        <li><a href="/media.php">Media</a></li>
+        <li><a href="/events.php">Events</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
           <ul class="dropdown-menu">
