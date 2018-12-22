@@ -23,7 +23,8 @@
         with one of the Union forces killed in the conflict and buried in the Two Ridges Cemetery.  A 1913 monument sits in the front
         yard of the church commemorating the event.</p>
         <p>A new Manse, the house for the Pastor, was constructed in the 1890s about a mile from the church, replacing an earlier home
-        constructed in the 1860s.  That Manse was sold when the current house was constructed in 1936 next door to the church building.</p>
+        constructed in the 1860s.  That Manse was sold and a new house was constructed in 1936 next door to the church building.  That
+        Manse was removed from the site in 2016.</p>
         <p>In 1887, the previous church building was dismantled and pieces salvaged to be reused in the new building.  The current
         church building, known to area residents as the white church with the red doors, was served as a sentential on Two Ridges
         ever since.  In 1970, an educational building and fellowship hall were added to the 1887 building.</p>
