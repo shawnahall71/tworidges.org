@@ -13,6 +13,7 @@
 	<!-- Background image CSS -->
 	<link href="/css/custom.css" rel="stylesheet">
 
+	<!-- Facebook Javascript necessary for Facebook components -->
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
@@ -22,11 +23,5 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 
-	<!-- Just for debugging purposes. Don't actually copy this line! -->
-	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
+	<!-- Load reCAPTCHA api.js -->
+	<script src='https://www.google.com/recaptcha/api.js?render=6Ld6T4QUAAAAAM6g71ghfo3yWRpGyOgyWsqi3X3S'></script>

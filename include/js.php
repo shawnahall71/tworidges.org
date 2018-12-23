@@ -10,6 +10,16 @@ $(document).ready(function() {
     $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
 });
 </script>
+<!-- Trigger reCAPTCHA Javascript -->
+<script>
+grecaptcha.ready(function() {
+  grecaptcha.execute('6Ld6T4QUAAAAAM6g71ghfo3yWRpGyOgyWsqi3X3S', {action: 'action_name'})
+  .then(function(token) {
+    // Verify the token on the server.
+  });
+});
+</script>
+<!-- Google Analytics tracking -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
