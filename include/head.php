@@ -8,7 +8,7 @@
 
 	<!-- Bootstrap core CSS -->
 	<!--<link href="/css/bootstrap.min.css" rel="stylesheet">-->
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Background image CSS -->
 	<link href="/css/custom.css" rel="stylesheet">
