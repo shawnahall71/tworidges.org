@@ -1,2 +1,3 @@
 .ftpconfig
 .ftpignore
+include/recaptcha/config.php
