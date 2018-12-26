@@ -17,7 +17,7 @@
 		?>
 		<div class="container mytext">
 	<h4>Send the church a prayer request below:</h4>
-		<form role="form" name="prayerfrm" method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+		<form role="form" name="prayerfrm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <strong>Please enter the information you are comfortable sharing.  For confidentiality reasons,
          please only provide your information, not the person for whom you are praying.  If you wish to
           receive a response, please provide enough information to reach you.</strong>

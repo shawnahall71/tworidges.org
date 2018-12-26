@@ -28,7 +28,7 @@
 		?>
 		<div class="container mytext">
 	<h4>Send the church a message below:</h4>
-		<form role="form" name="contactfrm" method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+		<form role="form" name="contactfrm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <strong>Fields marked (*) are required</strong>
 		<p></p>
 		<div class="form-group">
