@@ -13,7 +13,7 @@ $(document).ready(function() {
 <!-- Trigger reCAPTCHA Javascript -->
 <script>
 grecaptcha.ready(function() {
-  grecaptcha.execute('6Ld6T4QUAAAAAM6g71ghfo3yWRpGyOgyWsqi3X3S', {action: 'action_name'})
+  grecaptcha.execute('6Ld6T4QUAAAAAM6g71ghfo3yWRpGyOgyWsqi3X3S', {action: 'page_load'})
   .then(function(token) {
     // Verify the token on the server.
   });
