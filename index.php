@@ -18,7 +18,7 @@
 				<h2>Rev. Dr. Bill Lawrence, Pastor</h2>
 			</div>
 			<div class="col-md-6">
-				<img class="img-responsive center-block" src="http://res.cloudinary.com/tworidges/image/upload/img/church.jpg">
+				<img class="img-responsive center-block" src="http://res.cloudinary.com/tworidges/image/upload/f_auto,q_auto/img/church.jpg">
 			</div>
 			<div class="col-md-6 mytext">
 				<h2 class="text-center">Newsletter</h2>
@@ -34,12 +34,12 @@
 				<a class="btn btn-primary" href="events.php" role="button">Events &raquo;</a>
 			</div>
 			<div class="col-md-6">
-				<img class="img-responsive center-block" style="max-width:50%" src="http://res.cloudinary.com/tworidges/image/upload/img/pcusa_seal.gif">
+				<img class="img-responsive center-block" style="max-width:50%" src="http://res.cloudinary.com/tworidges/image/upload/f_auto,q_auto/img/pcusa_seal.gif">
 			</div>
 		</div>
 		<div class="row padtop">
 			<div class="col-md-6">
-				<img class="img-responsive center-block" src="http://res.cloudinary.com/tworidges/image/upload/img/prayer.jpg">
+				<img class="img-responsive center-block" src="http://res.cloudinary.com/tworidges/image/upload/f_auto,q_auto/img/prayer.jpg">
 			</div>
 			<div class="col-md-6 mytext">
 				<h2 class="text-center">Prayer Requests</h2>
