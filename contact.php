@@ -141,7 +141,7 @@
 				$message .= "<br><fontface='Arial'><b>Phone: </b>" . filter_var($_POST["Phone"], FILTER_SANITIZE_STRING);
 				// message lines should not exceed 70 characters (PHP rule), so wrap it
 				$message .= "<br><fontface='Arial'><b>Message: </b>";
-				$message .= wordwrap($_POST["Message"], 70, "\r\n");
+				$message .= wordwrap(filter_var($_POST["Message"], FILTER_SANITIZE_STRING), 70, "\r\n");
 				$message .= "<br><br><u><b><fontface='Arial'><font color='#000000'>";
 				$message .= "Visitor information</b></u></font></p><br>";
 				$message .= "<br><fontface='Arial'><b>From IP address: </b>" . $_SERVER["REMOTE_ADDR"];
