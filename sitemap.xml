@@ -6,60 +6,52 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
-  <loc>http://www.tworidges.org/</loc>
-  <changefreq>monthly</changefreq>
+  <loc>http://tworidges.org/</loc>
+  <lastmod>2018-12-27T19:11:24+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.tworidges.org/index.php</loc>
-  <changefreq>monthly</changefreq>
+  <loc>http://tworidges.org/events.php</loc>
+  <lastmod>2018-12-27T19:11:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.tworidges.org/calendar.php</loc>
-  <changefreq>monthly</changefreq>
+  <loc>http://tworidges.org/history.php</loc>
+  <lastmod>2018-12-27T19:11:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.tworidges.org/media.php</loc>
-  <changefreq>monthly</changefreq>
+  <loc>http://tworidges.org/women.php</loc>
+  <lastmod>2018-12-27T19:11:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.tworidges.org/history.php</loc>
-  <changefreq>monthly</changefreq>
+  <loc>http://tworidges.org/committees.php</loc>
+  <lastmod>2018-12-27T19:11:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.tworidges.org/women.php</loc>
-  <changefreq>monthly</changefreq>
+  <loc>http://tworidges.org/prayers.php</loc>
+  <lastmod>2018-12-27T19:11:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.tworidges.org/committees.php</loc>
-  <changefreq>monthly</changefreq>
+  <loc>http://tworidges.org/visit.php</loc>
+  <lastmod>2018-12-27T19:11:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.tworidges.org/prayers.php</loc>
-  <changefreq>monthly</changefreq>
+  <loc>http://tworidges.org/contact.php</loc>
+  <lastmod>2018-12-27T19:11:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.tworidges.org/visit.php</loc>
-  <changefreq>monthly</changefreq>
+  <loc>http://tworidges.org/js/pdfjs/web/viewer.html?file=http://res.cloudinary.com/tworidges/image/upload/files/newsletter.pdf</loc>
+  <lastmod>2018-12-27T19:02:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>http://www.tworidges.org/contact.php</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.tworidges.org/js/pdfjs/web/viewer.html?file=/files/newsletter.pdf</loc>
-  <lastmod>2014-09-30T21:24:55+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
+
+
 </urlset>
