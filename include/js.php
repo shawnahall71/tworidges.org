@@ -15,6 +15,9 @@ $(document).ready(function() {
 grecaptcha.ready(function() {
   grecaptcha.execute('6Ld6T4QUAAAAAM6g71ghfo3yWRpGyOgyWsqi3X3S', {action: 'page_load'})
   .then(function(token) {
+    if (document.getElementById('g-recaptcha-response')) {
+      document.getElementById('g-recaptcha-response').value = token;
+    }
     // Verify the token on the server.
   });
 });

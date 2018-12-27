@@ -29,6 +29,8 @@
 		<div class="container mytext">
 	<h4>Send the church a message below:</h4>
 		<form role="form" name="contactfrm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+		<!-- Add g-recaptcha-response to the form so it will be POSTed with form -->
+		<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
         <strong>Fields marked (*) are required</strong>
 		<p></p>
 		<div class="form-group">
@@ -122,52 +124,86 @@
 	  if (isset($_POST["EmailFrom"])) {
 	    // Check if "from" email address is valid
 	    $mailcheck = spamcheck($_POST["EmailFrom"]);
-	    if ($mailcheck==FALSE) {
-	    	echo "Invalid input";
-	    } else {
-	    	require_once("include/geoplugin.class.php");
-	    	$geoplugin = new geoPlugin();
-	    	$geoplugin->locate();
-	    	$to = 'contact@tworidges.org';
-		    $subject = "Contact Form from Two Ridges";
-		    $message = "<html><body>This message was sent on ";
-		    $message .= date('M j\, Y \a\t h:i:s A T');
-			$message .= "<br><br><u><b><fontface='Arial'><font color='#000000'>";
-			$message .= "Two Ridges - Contact Us Form</b></u></font><br>";
-			$message .= "<br><fontface='Arial'><b>Name: </b>" . $_POST["Name"];
-			$message .= "<br><fontface='Arial'><b>Address: </b>" . $_POST["Address"];
-			$message .= "<br><fontface='Arial'><b>City: </b>" . $_POST["City"];
-			$message .= "<br><fontface='Arial'><b>State: </b>" . $_POST["State"];
-			$message .= "<br><fontface='Arial'><b>Phone: </b>" . $_POST["Phone"];
-			// message lines should not exceed 70 characters (PHP rule), so wrap it
-			$message .= "<br><fontface='Arial'><b>Message: </b>";
-			$message .= wordwrap($_POST["Message"], 70, "\r\n");
-			$message .= "<br><br><u><b><fontface='Arial'><font color='#000000'>";
-			$message .= "Visitor information</b></u></font></p><br>";
-			$message .= "<br><fontface='Arial'><b>From IP address: </b>" . $_SERVER["REMOTE_ADDR"];
-		    $message .= "<br><fontface='Arial'><b>From hostname: </b>" . gethostbyaddr($_SERVER["REMOTE_ADDR"]);
-		    $message .= "<br><fontface='Arial'><b>Using browser: </b>" . $_SERVER["HTTP_USER_AGENT"];
-		    $message .= "<br><fontface='Arial'><b>Referred by: </b>" . $_SERVER["HTTP_REFERER"];
-		    $message .= "<br><fontface='Arial'><b>City: </b>{$geoplugin->city}";
-		    $message .= "<br><fontface='Arial'><b>Region: </b>{$geoplugin->region}";
-		    $message .= "<br><fontface='Arial'><b>Area Code: </b>{$geoplugin->areaCode}";
-		    $message .= "<br><fontface='Arial'><b>DMA Code: </b>{$geoplugin->dmaCode}";
-		    $message .= "<br><fontface='Arial'><b>Country Name: </b>{$geoplugin->countryName}";
-		    $message .= "<br><fontface='Arial'><b>Latitude: </b>{$geoplugin->latitude}";
-		    $message .= "<br><fontface='Arial'><b>Longitude: </b>{$geoplugin->longitude}";
-			$message .= "</body></html>";
-		    // To send HTML mail, the Content-type header must be set
-			$headers  = 'MIME-Version: 1.0' . "\r\n";
-			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-			$headers .= 'From: ' . $_POST["EmailFrom"] . "\r\n";
-			$headers .= 'Reply-To: ' . $_POST["EmailFrom"] . "\r\n";
-		    // send mail
-		    mail($to,$subject,$message,$headers);
-		    print '	<div class="container">
-						<div class="alert alert-success">
-							Thank you.  Your message has been sent to the church.
-						</div>
-					</div>';
+	    if ($mailcheck==TRUE) {
+				// Whether or not its spam, we'll prepare the message in case we're debugging
+				require_once("include/geoplugin.class.php");
+				$geoplugin = new geoPlugin();
+				$geoplugin->locate();
+				$to = 'contact@tworidges.org';
+				$message = "<html><body>This message was sent on ";
+				$message .= date('M j\, Y \a\t h:i:s A T');
+				$message .= "<br><br><u><b><fontface='Arial'><font color='#000000'>";
+				$message .= "Two Ridges - Contact Us Form</b></u></font><br>";
+				$message .= "<br><fontface='Arial'><b>Name: </b>" . filter_var($_POST["Name"], FILTER_SANITIZE_STRING);
+				$message .= "<br><fontface='Arial'><b>Address: </b>" . filter_var($_POST["Address"], FILTER_SANITIZE_STRING);
+				$message .= "<br><fontface='Arial'><b>City: </b>" . filter_var($_POST["City"], FILTER_SANITIZE_STRING);
+				$message .= "<br><fontface='Arial'><b>State: </b>" . filter_var($_POST["State"], FILTER_SANITIZE_STRING);
+				$message .= "<br><fontface='Arial'><b>Phone: </b>" . filter_var($_POST["Phone"], FILTER_SANITIZE_STRING);
+				// message lines should not exceed 70 characters (PHP rule), so wrap it
+				$message .= "<br><fontface='Arial'><b>Message: </b>";
+				$message .= wordwrap($_POST["Message"], 70, "\r\n");
+				$message .= "<br><br><u><b><fontface='Arial'><font color='#000000'>";
+				$message .= "Visitor information</b></u></font></p><br>";
+				$message .= "<br><fontface='Arial'><b>From IP address: </b>" . $_SERVER["REMOTE_ADDR"];
+				$message .= "<br><fontface='Arial'><b>From hostname: </b>" . gethostbyaddr($_SERVER["REMOTE_ADDR"]);
+				$message .= "<br><fontface='Arial'><b>Using browser: </b>" . $_SERVER["HTTP_USER_AGENT"];
+				$message .= "<br><fontface='Arial'><b>Referred by: </b>" . $_SERVER["HTTP_REFERER"];
+				$message .= "<br><fontface='Arial'><b>City: </b>{$geoplugin->city}";
+				$message .= "<br><fontface='Arial'><b>Region: </b>{$geoplugin->region}";
+				$message .= "<br><fontface='Arial'><b>Area Code: </b>{$geoplugin->areaCode}";
+				$message .= "<br><fontface='Arial'><b>DMA Code: </b>{$geoplugin->dmaCode}";
+				$message .= "<br><fontface='Arial'><b>Country Name: </b>{$geoplugin->countryName}";
+				$message .= "<br><fontface='Arial'><b>Latitude: </b>{$geoplugin->latitude}";
+				$message .= "<br><fontface='Arial'><b>Longitude: </b>{$geoplugin->longitude}";
+				$message .= "</body></html>";
+					// To send HTML mail, the Content-type header must be set
+				$headers  = 'MIME-Version: 1.0' . "\r\n";
+				$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+				$headers .= 'From: ' . filter_var($_POST["EmailFrom"], FILTER_SANITIZE_EMAIL) . "\r\n";
+				$headers .= 'Reply-To: ' . filter_var($_POST["EmailFrom"], FILTER_SANITIZE_EMAIL) . "\r\n";
+
+				// If email is valid, verify reCAPTCHA
+				require_once __DIR__ . '/include/recaptcha/autoload.php';
+				$config = include __DIR__ . '/include/recaptcha/config.php';
+				$siteKey = $config['v3']['site'];
+				$secret = $config['v3']['secret'];
+				$recaptcha = new \ReCaptcha\ReCaptcha($secret);
+				$resp = $recaptcha->setExpectedHostname($_SERVER['SERVER_NAME'])
+				                  ->setScoreThreshold(0.5)
+				                  ->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+				if ($resp->isSuccess()) {
+					// If reCAPTCHA validation is successful, send email
+					$subject = "Contact Form from Two Ridges";
+					mail($to,$subject,$message,$headers);
+					print '	<div class="container">
+							<div class="alert alert-success">
+								Thank you.  Your message has been sent to the church.
+							</div>
+						</div>';
+				} else {
+					  // If reCAPTCHA returns likely spam
+						$recaptcha_debug = $config['v3']['debug'];
+						if ($recaptcha_debug == TRUE) {
+							// If we're in debug mode, send the email that would have been sent, marking as spam
+							$subject = "SPAM via Contact Form from Two Ridges";
+							mail($to,$subject,$message,$headers);
+						}
+						print '	<div class="container">
+								<div class="alert alert-danger">
+									Sorry, you appear to be sending spam according to our filters.
+									Your message was not sent to the church.
+									If you believe this was incorrect, please contact the church through a different method.
+								</div>
+							</div>';
+				}
+
+	  } else {
+			// If email address was invalid
+			print '	<div class="container">
+					<div class="alert alert-danger">
+						Sorry, you did not enter a valid email address.  Your message was not sent to the church.
+					</div>
+				</div>';
 		}
 	  }
     }
