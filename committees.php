@@ -16,35 +16,43 @@
 			<table align="center" class="table table-bordered table-striped">
                 <tr>
                 	<td>Pastor</td>
-                	<td>Rev. Dr. Bill Lawrence</td>
+                	<td>Rev. Dr. Bill N. Lawrence</td>
                 </tr>
                 <tr>
 					<td>Clerk of Session</td>
                 	<td>Alan Hall</td>
                 </tr>
                 <tr>
-                	<td>Administrative Committee</td>
-                	<td>Alan Hall</td>
+                	<td>Administrative/Evangelism Chair</td>
+                	<td>Kim Bozich</td>
                 </tr>
                 <tr>
-					<td>Mission Committee</td>
-                    <td>Dona Della Penna Fisher</td>
-                </tr>
-                <tr>
-					<td>Congregational Care Committee</td>
-                    <td>Fred Goddard</td>
-                </tr>
-                <tr>
-					<td>Evangelism Committee</td>
-                    <td>Steve Barlow</td>
-                </tr>
-                <tr>
-					<td>Building and Grounds Committee</td>
+					<td>Building and Grounds Chair</td>
                     <td>John Clevenger</td>
                 </tr>
                 <tr>
-					<td>Worship Committee</td>
-                    <td>Mary Kay Bates</td>
+					<td>Building and Grounds</td>
+                    <td>David Albaugh</td>
+                </tr>
+                <tr>
+					<td>Congregational Care Chair</td>
+                    <td>Ken Dornbush</td>
+                </tr>
+                <tr>
+					<td>Congregational Care</td>
+                    <td>Greg Williamson</td>
+                </tr>
+                <tr>
+					<td>Mission Chair</td>
+                    <td>Tammy Hammer</td>
+                </tr>
+                <tr>
+					<td>Worship Chair</td>
+                    <td>Tami Hosterman</td>
+                </tr>
+                <tr>
+					<td>Session Member</td>
+                    <td>Mark Stuller</td>
                 </tr>
                 </table>
 		</div>
