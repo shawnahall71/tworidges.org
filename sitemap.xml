@@ -8,47 +8,52 @@
 
 
 <url>
-  <loc>http://tworidges.org/</loc>
-  <lastmod>2019-02-12T12:48:50+00:00</lastmod>
+  <loc>https://tworidges.org/</loc>
+  <lastmod>2022-01-31T13:01:42+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://tworidges.org/events.php</loc>
-  <lastmod>2019-02-12T12:48:50+00:00</lastmod>
+  <loc>https://tworidges.org/donate.php</loc>
+  <lastmod>2022-01-31T13:01:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tworidges.org/history.php</loc>
-  <lastmod>2019-02-12T12:48:50+00:00</lastmod>
+  <loc>https://tworidges.org/events.php</loc>
+  <lastmod>2022-01-31T13:01:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tworidges.org/women.php</loc>
-  <lastmod>2019-02-12T12:48:50+00:00</lastmod>
+  <loc>https://tworidges.org/history.php</loc>
+  <lastmod>2022-01-31T13:01:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tworidges.org/committees.php</loc>
-  <lastmod>2019-02-12T12:48:50+00:00</lastmod>
+  <loc>https://tworidges.org/women.php</loc>
+  <lastmod>2022-01-31T13:01:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tworidges.org/prayers.php</loc>
-  <lastmod>2019-02-12T12:48:50+00:00</lastmod>
+  <loc>https://tworidges.org/committees.php</loc>
+  <lastmod>2022-01-31T13:01:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tworidges.org/visit.php</loc>
-  <lastmod>2019-02-12T12:48:50+00:00</lastmod>
+  <loc>https://tworidges.org/prayers.php</loc>
+  <lastmod>2022-01-31T13:01:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tworidges.org/contact.php</loc>
-  <lastmod>2019-02-12T12:48:50+00:00</lastmod>
+  <loc>https://tworidges.org/visit.php</loc>
+  <lastmod>2022-01-31T13:01:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://tworidges.org/js/pdfjs/web/viewer.html?file=http://res.cloudinary.com/tworidges/image/upload/files/newsletter.pdf</loc>
+  <loc>https://tworidges.org/contact.php</loc>
+  <lastmod>2022-01-31T13:01:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tworidges.org/js/pdfjs/web/viewer.html?file=http://res.cloudinary.com/tworidges/image/upload/files/newsletter.pdf</loc>
   <lastmod>2018-12-27T19:02:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>

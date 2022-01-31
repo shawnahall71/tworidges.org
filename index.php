@@ -29,9 +29,9 @@
 		</div>
 		<div class="row padtop">
 			<div class="col-md-6 mytext">
-				<h2 class="text-center">Events</h2>
-				<p>Find out about the latest events happening at Two Ridges.</p>
-				<a class="btn btn-primary" href="events.php" role="button">Events &raquo;</a>
+				<h2 class="text-center">Donate</h2>
+				<p>Make an online donation to Two Ridges Presbyterian Church.</p>
+				<a class="btn btn-primary" href="https://tworidges.breezechms.com/give/online" role="button">Donate &raquo;</a>
 			</div>
 			<div class="col-md-6">
 				<img class="img-responsive center-block" style="max-width:50%" src="http://res.cloudinary.com/tworidges/image/upload/f_auto,q_auto/img/pcusa_seal.gif">
