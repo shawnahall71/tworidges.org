@@ -12,7 +12,7 @@ html { /* Stretches background to bottom on mobile platforms */
 }
 
 body { /* Actually puts the background in place */
-	background: url('http://res.cloudinary.com/tworidges/image/upload/f_auto,q_auto/img/background.jpg') no-repeat center center fixed;
+	background: url('https://res.cloudinary.com/tworidges/image/upload/f_auto,q_auto/img/background.jpg') no-repeat center center fixed;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
